@@ -1,0 +1,354 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class computer{
+	
+	JFrame f;
+	String number = "";
+	String op = "";
+	int x, y, sum;
+		
+	public static void main(String[] args) {
+		new computer();
+	}
+	
+	public computer(){
+		
+		
+		JFrame f =new JFrame();
+		f.setLayout(new GridBagLayout());
+		f.setSize(200, 200);
+		f.setVisible(true);
+		f.setResizable(false);
+		
+		
+		JPanel up = new JPanel();
+		
+		JPanel down = new JPanel();
+		down.setLayout(new GridBagLayout());
+		
+		
+		JButton one = new JButton("1");
+		JButton two = new JButton("2");
+		JButton three = new JButton("3");
+		JButton four = new JButton("4");
+		JButton five = new JButton("5");
+		JButton six = new JButton("6");
+		JButton seven = new JButton("7");
+		JButton eight = new JButton("8");
+		JButton nine = new JButton("9");
+		JButton zero = new JButton("0");
+		JButton add = new JButton("+");
+		JButton minus = new JButton("-");
+		JButton times = new JButton("*");
+		JButton devide = new JButton("/");
+		JButton cancel = new JButton("C");
+		JButton equal = new JButton("=");
+		
+		
+		final JTextField tf = new JTextField(number);
+		tf.setColumns(15);
+		tf.setBackground(new Color(255, 255, 255));
+		tf.setHorizontalAlignment(SwingConstants.RIGHT);
+		tf.setEditable(false);
+		
+		
+		JLabel lb = new JLabel(number); 
+		lb.setBackground(new Color(240, 220, 190));
+		
+		
+		up.add(tf, BorderLayout.CENTER);
+		
+		
+		GridBagConstraints c1 = new GridBagConstraints();
+		c1.gridx = 0;
+        c1.gridy = 0;
+        down.add(one, c1);
+        
+        GridBagConstraints c2 = new GridBagConstraints();
+		c2.gridx = 1;
+        c2.gridy = 0;
+        down.add(two, c2);
+        
+        GridBagConstraints c3 = new GridBagConstraints();
+		c3.gridx = 2;
+        c3.gridy = 0;
+        down.add(three, c3);
+        
+        GridBagConstraints c4 = new GridBagConstraints();
+		c4.gridx = 0;
+        c4.gridy = 1;
+        down.add(four, c4);
+        
+        GridBagConstraints c5 = new GridBagConstraints();
+		c5.gridx = 1;
+        c5.gridy = 1;
+        down.add(five, c5);
+        
+        GridBagConstraints c6 = new GridBagConstraints();
+		c6.gridx = 2;
+        c6.gridy = 1;
+        down.add(six, c6);
+        
+        GridBagConstraints c7 = new GridBagConstraints();
+		c7.gridx = 0;
+        c7.gridy = 2;
+        down.add(seven, c7);
+        
+        GridBagConstraints c8 = new GridBagConstraints();
+		c8.gridx = 1;
+        c8.gridy = 2;
+        down.add(eight, c8);
+        
+        GridBagConstraints c9 = new GridBagConstraints();
+		c9.gridx = 2;
+        c9.gridy = 2;
+        down.add(nine, c9);
+        
+        GridBagConstraints c0 = new GridBagConstraints();
+		c0.gridx = 0;
+        c0.gridy = 3;
+        down.add(zero, c0);
+        
+        GridBagConstraints ca = new GridBagConstraints();
+		ca.gridx = 3;
+        ca.gridy = 0;
+        down.add(add, ca);
+        
+        GridBagConstraints cm = new GridBagConstraints();
+		cm.gridx = 3;
+        cm.gridy = 1;
+        down.add(minus, cm);
+        
+        GridBagConstraints ct = new GridBagConstraints();
+		ct.gridx = 3;
+        ct.gridy = 2;
+        down.add(times, ct);
+        
+        GridBagConstraints cd = new GridBagConstraints();
+		cd.gridx = 3;
+        cd.gridy = 3;
+        down.add(devide, cd);
+        
+        GridBagConstraints cc = new GridBagConstraints();
+		cc.gridx = 1;
+        cc.gridy = 3;
+        down.add(cancel, cc);
+        
+        GridBagConstraints ce = new GridBagConstraints();
+		ce.gridx = 2;
+        ce.gridy = 3;
+        down.add(equal, ce);
+        
+		
+		//上下版面排版
+		GridBagConstraints cup = new GridBagConstraints();
+		cup.gridx = 0;
+		cup.gridy = 0;
+        f.add(up, cup);
+        
+        GridBagConstraints cdown= new GridBagConstraints();
+        cdown.gridx = 0;
+        cdown.gridy = 1;
+        f.add(down, cdown);
+        
+        
+		Container c = f.getContentPane();
+        
+        
+        //button動作
+        one.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "1";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        two.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "2";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        three.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "3";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        four.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "4";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        five.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "5";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        six.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "6";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        seven.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "7";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        eight.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "8";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        nine.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "9";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        zero.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number += "0";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        add.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				x = Integer.parseInt(number);
+				
+				number = "";
+				op = "+";
+				
+				tf.setText(op);
+				
+			}
+	    });
+        
+        minus.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				x = Integer.parseInt(number);
+				
+				number = "";
+				op = "-";
+				
+				tf.setText(op);
+				
+			}
+	    });
+        
+        times.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				x = Integer.parseInt(number);
+				
+				number = "";
+				op = "*";
+				
+				tf.setText(op);
+				
+			}
+	    });
+        
+        devide.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				x = Integer.parseInt(number);
+				
+				number = "";
+				op = "/";
+				
+				tf.setText(op);
+				
+			}
+	    });
+        
+        cancel.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				number = "";
+				tf.setText(number);
+				
+			}
+	    });
+        
+        //等於
+        equal.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) {
+				
+				y = Integer.parseInt(number);
+				
+				number = "";
+				
+				if("+".equals(op))
+				{
+					sum = x + y;
+				}
+				else if("-".equals(op))
+				{
+					sum = x - y;
+				}
+				else if("*".equals(op))
+				{
+					sum = x * y;
+				}
+				else if("/".equals(op))
+				{
+					if(y == 0)
+					{
+						JOptionPane.showMessageDialog(null,"除數不得為0，請重新輸入!!");
+						number = "";
+						sum = 0;
+					}
+					else
+					{
+						sum = x / y;
+					}
+				}
+				
+				tf.setText(Integer.toString(sum));
+				
+			}
+	    });
+		
+	}
+
+
+}
